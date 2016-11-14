@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_pin_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.slin77gatech.handypin.PinDetailActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="#FCE4EC"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:backgroundTint="#F48FB1"
+                android:layout_marginLeft="5dp"
+                card_view:cardCornerRadius="10dp"
+                android:elevation="5dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        card_view:srcCompat="@drawable/cast_album_art_placeholder"
+                        android:id="@+id/imageView" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:text="Sizhe Lin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:id="@+id/detail_author_name"/>
+                        <TextView
+                            android:text="slin77@gatech.edu"
+                            android:id="@+id/detail_author_email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"/>
+
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="200dp"
+                        android:background="@android:color/transparent"
+                        card_view:srcCompat="@android:drawable/ic_menu_send"
+                        android:id="@+id/imageButton"/>
+                </LinearLayout>
+
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="#F8BBD0"
+                card_view:cardCornerRadius="10dp"
+                card_view:cardElevation="5dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/cast_libraries_material_featurehighlight_text_header_size"
+                        android:text="Title"
+                        android:id="@+id/pin_detail_title"
+                        android:gravity="center"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:id="@+id/pin_detail_content"
+                        android:text="@string/cast_invalid_stream_duration_text"/>
+                    <LinearLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <android.support.v7.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            card_view:cardCornerRadius="5dp"
+                            android:elevation="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_gravity="start|center_vertical"
+                            android:backgroundTint="#F06292"
+                            card_view:cardBackgroundColor="#90CAFB"
+                            android:id="@+id/vote_card">
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="3dp"
+                                    android:id="@+id/pin_detail_rate"
+                                    android:text="00"
+                                    android:textSize="24sp" />
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_height="wrap_content">
+                                    <ImageView
+                                        android:layout_width="24sp"
+                                        android:layout_height="match_parent"
+                                        card_view:srcCompat="@android:drawable/arrow_up_float" />
+                                    <ImageView
+                                        android:layout_width="24sp"
+                                        android:layout_height="match_parent"
+                                        card_view:srcCompat="@android:drawable/arrow_down_float" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+                        <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="0dp"
+                            android:backgroundTint="#F06292"
+                            android:id="@+id/get_comments_btn"
+                            card_view:srcCompat="@drawable/ic_media_route_connecting_00_light" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    </RelativeLayout>
+
+
